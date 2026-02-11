@@ -5,25 +5,26 @@
 Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞
 
 ## About
-Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 La base technique s'appuie sur une organisation de code exploitable en maintenance, avec scripts et points d'entree identifiables pour l'onboarding et les operations.
+Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 Ce README est oriente maintenance/operations pour faciliter l'onboarding, le run et la transition entre contributeurs.
 
 Fonctionnalites cles implementees a ce jour:
-- Entrees applicatives identifiees et versionnables (src/index.ts, package main: dist/index.js, package bin: openclaw).
-- Chaine de commandes projet disponible via scripts npm (dev, start, build, test).
-- Automatisation CI/CD en place (GitHub Actions).
-- Support d'execution conteneurise detecte.
+- Surface technique detectee: `Node.js`, `Express`, `TypeScript`, `Docker`, `Docker Compose`.
+- Points d'entree identifies: `src/index.ts`, `package main: dist/index.js`.
+- Workflow projet: scripts de build/run/test disponibles.
 
 ## Stack Technique
-- Technologies: `Node.js`, `TypeScript`, `Express`, `Docker`, `Docker Compose`
-- Version cle: Node.js >=22.12.0
-- Visibilite du depot: public
+- Technologies: `Node.js`, `Express`, `TypeScript`, `Docker`, `Docker Compose`
+- Versions cles: Node.js >=22.12.0
+- CI/CD detecte: GitHub Actions
+- Branche par defaut GitHub: `main`
+- Visibilite: public
 
 ## Installation & Configuration
-- 1. Cloner le depot puis se placer dans le dossier projet.
-- 2. Installer les dependances: `npm ci` (ou `npm install` si lockfile absent).
-- 3. Option conteneur: construire l'image via `docker build -t <image> .`.
-- 4. Variables d'environnement: copier `.env.example` vers `.env` et renseigner les cles ci-dessous.
-- Variables detectees: `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_WHATSAPP_FROM`
+- Prerequis: `git` + environnement de la stack (Node/Python/Docker selon la section precedente).
+- Installer dependances: `npm ci` (ou `npm install` si lockfile absent).
+- Option conteneur: `docker build -t <image> .`
+- Variables d'environnement: copier `.env.example` vers `.env`.
+- Cles detectees: `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_WHATSAPP_FROM`
 
 ## Commandes Usuelles
 | Action | Commande | Detail |
@@ -46,13 +47,27 @@ Fonctionnalites cles implementees a ce jour:
 | docs:dev | `npm run docs:dev` | cd docs && mint dev |
 
 ## Architecture
-- Modules/repertoires principaux: `Swabble`, `apps`, `assets`, `docs`, `extensions`, `git-hooks`, `packages`, `patches`, `scripts`, `skills`, `src`, `test`.
-- Points d'entree observes: `src/index.ts`, `package main: dist/index.js`, `package bin: openclaw`.
-- Pipeline CI/CD detecte: GitHub Actions.
+- Repertoires principaux: `Swabble`, `apps`, `assets`, `docs`, `extensions`, `git-hooks`, `packages`, `patches`, `scripts`, `skills`, `src`, `test`.
+- Entry points: `src/index.ts`, `package main: dist/index.js`.
+- CI/CD: GitHub Actions.
+
+## Timeline & Metrics
+- Creation GitHub: 2026-02-04
+- Premiere activite git (local): 2025-11-24
+- Derniere activite git (local): 2026-02-10
+- Periode de travail observee: 2025-11-24 -> 2026-02-10 (78 day(s))
+- Nombre total de commits (all branches): 8870
+- Nombre de contributeurs (historique git): 458
+- Fichiers suivis (git ls-files): 4955
+- Volume code approx. (lignes sur fichiers suivis): 924276
+- Branches locales: 1 | Tags: 0
 
 ## Etat Actuel
-- 41 marqueurs techniques (TODO/FIXME/XXX) trouvés dans le code.
-- Limites de cet audit: analyse statique rapide basee sur la structure du depot et les manifests disponibles.
+- TODO/FIXME/XXX detectes: 42
+- Etat workspace local: propre
+- Dernier push GitHub: 2026-02-11
+- Derniere mise a jour GitHub: 2026-02-11
+- Limitation: metriques calculees automatiquement, a completer si des donnees metier manquent.
 
 ## Historical Notes (README precedent)
 Les informations historiques suivantes ont ete conservees pour la transition maintenance:
