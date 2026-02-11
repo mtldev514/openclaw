@@ -5,26 +5,34 @@
 Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞
 
 ## About
-Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 Ce README est oriente maintenance/operations pour faciliter l'onboarding, le run et la transition entre contributeurs.
+Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 Ce README est oriente maintenance/operations (runbook + onboarding + passation).
 
-Fonctionnalites cles implementees a ce jour:
-- Surface technique detectee: `Node.js`, `Express`, `TypeScript`, `Docker`, `Docker Compose`.
-- Points d'entree identifies: `src/index.ts`, `package main: dist/index.js`.
-- Workflow projet: scripts de build/run/test disponibles.
+## Ce que fait l'application
+- Probleme cible: Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞
+- Solution technique: Le projet est implemente comme plateforme full-stack basee sur `Node.js`, `Express`, `TypeScript`, `Docker`.
+- Flux principal:
+  - Demarrage developpement via script `dev`.
+  - Execution applicative via script `start`.
+  - Build reproductible via script `build`.
+  - Validation technique via script `test`.
+- Fonctionnalites actuellement livrees:
+  - [Anthropic](https://www.anthropic.com/) (Claude Pro/Max)
+  - [OpenAI](https://openai.com/) (ChatGPT/Codex)
+  - Models config + CLI: [Models](https://docs.openclaw.ai/concepts/models)
+  - Auth profile rotation (OAuth vs API keys) + fallbacks: [Model failover](https://docs.openclaw.ai/concepts/model-failover)
 
 ## Stack Technique
-- Technologies: `Node.js`, `Express`, `TypeScript`, `Docker`, `Docker Compose`
+- Technologies: `Node.js`, `Express`, `TypeScript`, `Docker`, `GitHub Actions`
 - Versions cles: Node.js >=22.12.0
 - CI/CD detecte: GitHub Actions
 - Branche par defaut GitHub: `main`
 - Visibilite: public
 
 ## Installation & Configuration
-- Prerequis: `git` + environnement de la stack (Node/Python/Docker selon la section precedente).
-- Installer dependances: `npm ci` (ou `npm install` si lockfile absent).
+- Prerequis: `git` + runtime correspondant a la stack.
+- Installer dependances: `npm ci` (ou `npm install`).
 - Option conteneur: `docker build -t <image> .`
 - Variables d'environnement: copier `.env.example` vers `.env`.
-- Cles detectees: `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_WHATSAPP_FROM`
 
 ## Commandes Usuelles
 | Action | Commande | Detail |
@@ -47,19 +55,18 @@ Fonctionnalites cles implementees a ce jour:
 | docs:dev | `npm run docs:dev` | cd docs && mint dev |
 
 ## Architecture
-- Repertoires principaux: `Swabble`, `apps`, `assets`, `docs`, `extensions`, `git-hooks`, `packages`, `patches`, `scripts`, `skills`, `src`, `test`.
+- Repertoires principaux: `ui`, `ui/public`, `ui/src`, `git-hooks`, `test`, `test/mocks`, `test/fixtures`, `test/helpers`, `patches`, `Swabble`, `Swabble/Tests`, `Swabble/docs`.
 - Entry points: `src/index.ts`, `package main: dist/index.js`.
-- CI/CD: GitHub Actions.
 
 ## Timeline & Metrics
 - Creation GitHub: 2026-02-04
 - Premiere activite git (local): 2025-11-24
 - Derniere activite git (local): 2026-02-10
 - Periode de travail observee: 2025-11-24 -> 2026-02-10 (78 day(s))
-- Nombre total de commits (all branches): 8870
-- Nombre de contributeurs (historique git): 458
-- Fichiers suivis (git ls-files): 4955
-- Volume code approx. (lignes sur fichiers suivis): 924276
+- Nombre total de commits (all branches): 8871
+- Nombre de contributeurs: 458
+- Fichiers suivis: 4955
+- Volume code approx. (lignes): 924291
 - Branches locales: 1 | Tags: 0
 
 ## Etat Actuel
@@ -67,7 +74,7 @@ Fonctionnalites cles implementees a ce jour:
 - Etat workspace local: propre
 - Dernier push GitHub: 2026-02-11
 - Derniere mise a jour GitHub: 2026-02-11
-- Limitation: metriques calculees automatiquement, a completer si des donnees metier manquent.
+- Limitation: informations fonctionnelles deduites automatiquement; valider metier si necessaire.
 
 ## Historical Notes (README precedent)
 Les informations historiques suivantes ont ete conservees pour la transition maintenance:
@@ -614,7 +621,6 @@ Thanks to all clawtributors:
   <a href="https://github.com/latitudeki5223"><img src="https://avatars.githubusercontent.com/u/119656367?v=4&s=48" width="48" height="48" alt="latitudeki5223" title="latitudeki5223"/></a> <a href="https://github.com/search?q=Manuel%20Maly"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Manuel Maly" title="Manuel Maly"/></a> <a href="https://github.com/search?q=Mourad%20Boustani"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Mourad Boustani" title="Mourad Boustani"/></a> <a href="https://github.com/odrobnik"><img src="https://avatars.githubusercontent.com/u/333270?v=4&s=48" width="48" height="48" alt="odrobnik" title="odrobnik"/></a> <a href="https://github.com/pcty-nextgen-ios-builder"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="pcty-nextgen-ios-builder" title="pcty-nextgen-ios-builder"/></a> <a href="https://github.com/search?q=Quentin"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Quentin" title="Quentin"/></a> <a href="https://github.com/search?q=Randy%20Torres"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Randy Torres" title="Randy Torres"/></a> <a href="https://github.com/rhjoh"><img src="https://avatars.githubusercontent.com/u/105699450?v=4&s=48" width="48" height="48" alt="rhjoh" title="rhjoh"/></a> <a href="https://github.com/search?q=Rolf%20Fredheim"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Rolf Fredheim" title="Rolf Fredheim"/></a> <a href="https://github.com/ronak-guliani"><img src="https://avatars.githubusercontent.com/u/23518228?v=4&s=48" width="48" height="48" alt="ronak-guliani" title="ronak-guliani"/></a>
   <a href="https://github.com/search?q=William%20Stock"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="William Stock" title="William Stock"/></a> <a href="https://github.com/roerohan"><img src="https://avatars.githubusercontent.com/u/42958812?v=4&s=48" width="48" height="48" alt="roerohan" title="roerohan"/></a>
 </p>
-
 
 </details>
 
